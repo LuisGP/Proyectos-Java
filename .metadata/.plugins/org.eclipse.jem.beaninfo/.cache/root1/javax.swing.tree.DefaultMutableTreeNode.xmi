@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<change:ChangeDescription xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:change="http://www.eclipse.org/emf/2003/Change" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.jem.internal.beaninfo.beaninfo="http:///org/eclipse/jem/internal/beaninfo/beaninfo.ecore" xmlns:org.eclipse.jem.java="java.xmi">
+  <objectChanges xsi:type="change:EObjectToChangesMapEntry" key="org.eclipse.jem.java:JavaClass java:/javax.swing.tree#DefaultMutableTreeNode">
+    <value xsi:type="change:FeatureChange" featureName="eAnnotations">
+      <listChanges xsi:type="change:ListChange" referenceValues="#//@objectsToAttach.0"/>
+    </value>
+    <value xsi:type="change:FeatureChange" featureName="eStructuralFeatures">
+      <listChanges xsi:type="change:ListChange" referenceValues="#//@objectsToAttach.1 #//@objectsToAttach.2 #//@objectsToAttach.3 #//@objectsToAttach.4 #//@objectsToAttach.5 #//@objectsToAttach.6 #//@objectsToAttach.7 #//@objectsToAttach.8 #//@objectsToAttach.9 #//@objectsToAttach.10 #//@objectsToAttach.11 #//@objectsToAttach.12 #//@objectsToAttach.13 #//@objectsToAttach.14 #//@objectsToAttach.15 #//@objectsToAttach.16 #//@objectsToAttach.17 #//@objectsToAttach.18 #//@objectsToAttach.19 #//@objectsToAttach.20 #//@objectsToAttach.21 #//@objectsToAttach.22"/>
+    </value>
+  </objectChanges>
+  <objectsToAttach xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:BeanDecorator" implicitDecoratorFlag="IMPLICIT_DECORATOR"/>
+  <objectsToAttach xsi:type="ecore:EReference" name="leafCount" eType="org.eclipse.jem.java:JavaDataType java:/#int" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="52" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" readMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#DefaultMutableTreeNode.getLeafCount("/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="lastLeaf" eType="org.eclipse.jem.java:JavaClass java:/javax.swing.tree#DefaultMutableTreeNode" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="52" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" readMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#DefaultMutableTreeNode.getLastLeaf("/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="level" eType="org.eclipse.jem.java:JavaDataType java:/#int" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="52" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" readMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#DefaultMutableTreeNode.getLevel("/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="firstChild" eType="org.eclipse.jem.java:JavaClass java:/javax.swing.tree#TreeNode" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="52" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" readMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#DefaultMutableTreeNode.getFirstChild("/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="nextLeaf" eType="org.eclipse.jem.java:JavaClass java:/javax.swing.tree#DefaultMutableTreeNode" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="52" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" readMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#DefaultMutableTreeNode.getNextLeaf("/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="firstLeaf" eType="org.eclipse.jem.java:JavaClass java:/javax.swing.tree#DefaultMutableTreeNode" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="52" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" readMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#DefaultMutableTreeNode.getFirstLeaf("/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="childCount" eType="org.eclipse.jem.java:JavaDataType java:/#int" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="52" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" readMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#DefaultMutableTreeNode.getChildCount("/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="depth" eType="org.eclipse.jem.java:JavaDataType java:/#int" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="52" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" readMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#DefaultMutableTreeNode.getDepth("/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="leaf" eType="org.eclipse.jem.java:JavaDataType java:/#boolean" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="52" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" readMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#DefaultMutableTreeNode.isLeaf("/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="nextNode" eType="org.eclipse.jem.java:JavaClass java:/javax.swing.tree#DefaultMutableTreeNode" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="52" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" readMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#DefaultMutableTreeNode.getNextNode("/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="previousLeaf" eType="org.eclipse.jem.java:JavaClass java:/javax.swing.tree#DefaultMutableTreeNode" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="52" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" readMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#DefaultMutableTreeNode.getPreviousLeaf("/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="allowsChildren" eType="org.eclipse.jem.java:JavaDataType java:/#boolean" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="60" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" readMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#DefaultMutableTreeNode.getAllowsChildren(" writeMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#DefaultMutableTreeNode.setAllowsChildren(boolean"/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="previousNode" eType="org.eclipse.jem.java:JavaClass java:/javax.swing.tree#DefaultMutableTreeNode" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="52" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" readMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#DefaultMutableTreeNode.getPreviousNode("/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="siblingCount" eType="org.eclipse.jem.java:JavaDataType java:/#int" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="52" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" readMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#DefaultMutableTreeNode.getSiblingCount("/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="previousSibling" eType="org.eclipse.jem.java:JavaClass java:/javax.swing.tree#DefaultMutableTreeNode" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="52" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" readMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#DefaultMutableTreeNode.getPreviousSibling("/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="userObjectPath" eType="org.eclipse.jem.java:ArrayType java:/java.lang#Object[]" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="52" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" readMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#DefaultMutableTreeNode.getUserObjectPath("/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="nextSibling" eType="org.eclipse.jem.java:JavaClass java:/javax.swing.tree#DefaultMutableTreeNode" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="52" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" readMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#DefaultMutableTreeNode.getNextSibling("/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="userObject" eType="org.eclipse.jem.java:JavaClass java:/java.lang#Object" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="60" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" readMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#DefaultMutableTreeNode.getUserObject(" writeMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#DefaultMutableTreeNode.setUserObject(java.lang.Object"/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="lastChild" eType="org.eclipse.jem.java:JavaClass java:/javax.swing.tree#TreeNode" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="52" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" readMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#DefaultMutableTreeNode.getLastChild("/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="root" eType="org.eclipse.jem.java:JavaClass java:/javax.swing.tree#TreeNode" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="52" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" readMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#DefaultMutableTreeNode.getRoot("/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="path" eType="org.eclipse.jem.java:ArrayType java:/javax.swing.tree#TreeNode[]" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="52" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" readMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#DefaultMutableTreeNode.getPath("/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="parent" eType="org.eclipse.jem.java:JavaClass java:/javax.swing.tree#MutableTreeNode" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="56" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" writeMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#DefaultMutableTreeNode.setParent(javax.swing.tree.MutableTreeNode"/>
+  </objectsToAttach>
+</change:ChangeDescription>

@@ -1,0 +1,6 @@
+<bbdd-config>
+	<user>root</user>
+	<password>pisi</password>
+	<server>localhost</server>
+	<name>isii</name>
+</bbdd-config>

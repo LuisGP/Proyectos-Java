@@ -1,0 +1,69 @@
+-- phpMyAdmin SQL Dump
+-- version 2.7.0-pl1
+-- http://www.phpmyadmin.net
+-- 
+-- Servidor: localhost
+-- Tiempo de generación: 12-01-2007 a las 12:32:56
+-- Versión del servidor: 5.0.18
+-- Versión de PHP: 5.1.1
+-- 
+-- Base de datos: `isii`
+-- 
+CREATE DATABASE `isii` DEFAULT CHARACTER SET latin1 COLLATE latin1_general_ci;
+USE isii;
+
+-- --------------------------------------------------------
+
+-- 
+-- Estructura de tabla para la tabla `archivos`
+-- 
+
+CREATE TABLE IF NOT EXISTS `archivos` (
+  `propietario` varchar(100) collate latin1_general_ci NOT NULL,
+  `titulo` varchar(100) collate latin1_general_ci NOT NULL,
+  `autor` varchar(100) collate latin1_general_ci NOT NULL default '',
+  `album` varchar(100) collate latin1_general_ci NOT NULL default '',
+  `anyo` year(4) default NULL,
+  `duracion` time default NULL,
+  `genero` varchar(50) collate latin1_general_ci default NULL,
+  PRIMARY KEY  (`propietario`,`titulo`,`autor`,`album`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+
+-- 
+-- Volcar la base de datos para la tabla `archivos`
+-- 
+
+
+-- --------------------------------------------------------
+
+-- 
+-- Estructura de tabla para la tabla `grupos`
+-- 
+
+CREATE TABLE IF NOT EXISTS `grupos` (
+  `artista` varchar(100) collate latin1_general_ci NOT NULL,
+  `grupo` varchar(100) collate latin1_general_ci NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+
+-- 
+-- Volcar la base de datos para la tabla `grupos`
+-- 
+
+
+-- --------------------------------------------------------
+
+-- 
+-- Estructura de tabla para la tabla `usuarios`
+-- 
+
+CREATE TABLE IF NOT EXISTS `usuarios` (
+  `id` varchar(100) collate latin1_general_ci NOT NULL,
+  `nombre` varchar(50) collate latin1_general_ci NOT NULL,
+  `password` varchar(50) collate latin1_general_ci NOT NULL,
+  PRIMARY KEY  (`id`),
+  UNIQUE KEY `nombre` (`nombre`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+
+-- 
+-- Volcar la base de datos para la tabla `usuarios`
+-- 

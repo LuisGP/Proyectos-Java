@@ -1,0 +1,15 @@
+package iu;
+
+import java.io.File;
+
+public class Fichero {
+	private File fichero = null;
+	
+	public void setFichero(File f){
+		fichero = f;
+	}
+	
+	public File getFichero(){
+		return fichero;
+	}
+}

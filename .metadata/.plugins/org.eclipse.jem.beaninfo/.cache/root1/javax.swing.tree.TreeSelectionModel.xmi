@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<change:ChangeDescription xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:change="http://www.eclipse.org/emf/2003/Change" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.jem.internal.beaninfo.beaninfo="http:///org/eclipse/jem/internal/beaninfo/beaninfo.ecore" xmlns:org.eclipse.jem.java="java.xmi">
+  <objectChanges xsi:type="change:EObjectToChangesMapEntry" key="org.eclipse.jem.java:JavaClass java:/javax.swing.tree#TreeSelectionModel">
+    <value xsi:type="change:FeatureChange" featureName="eAnnotations">
+      <listChanges xsi:type="change:ListChange" referenceValues="#//@objectsToAttach.0"/>
+    </value>
+    <value xsi:type="change:FeatureChange" featureName="eStructuralFeatures">
+      <listChanges xsi:type="change:ListChange" referenceValues="#//@objectsToAttach.1 #//@objectsToAttach.2 #//@objectsToAttach.3 #//@objectsToAttach.4 #//@objectsToAttach.5 #//@objectsToAttach.6 #//@objectsToAttach.7 #//@objectsToAttach.8 #//@objectsToAttach.9 #//@objectsToAttach.10 #//@objectsToAttach.11"/>
+    </value>
+    <value xsi:type="change:FeatureChange" featureName="events">
+      <listChanges xsi:type="change:ListChange" referenceValues="#//@objectsToAttach.12 #//@objectsToAttach.13"/>
+    </value>
+  </objectChanges>
+  <objectsToAttach xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:BeanDecorator" implicitDecoratorFlag="IMPLICIT_DECORATOR"/>
+  <objectsToAttach xsi:type="ecore:EReference" name="leadSelectionPath" eType="org.eclipse.jem.java:JavaClass java:/javax.swing.tree#TreePath" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="52" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" bound="true" readMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#TreeSelectionModel.getLeadSelectionPath("/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="selectionEmpty" eType="org.eclipse.jem.java:JavaDataType java:/#boolean" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="52" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" bound="true" readMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#TreeSelectionModel.isSelectionEmpty("/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="leadSelectionRow" eType="org.eclipse.jem.java:JavaDataType java:/#int" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="52" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" bound="true" readMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#TreeSelectionModel.getLeadSelectionRow("/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="selectionPath" eType="org.eclipse.jem.java:JavaClass java:/javax.swing.tree#TreePath" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="60" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" bound="true" readMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#TreeSelectionModel.getSelectionPath(" writeMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#TreeSelectionModel.setSelectionPath(javax.swing.tree.TreePath"/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="selectionMode" eType="org.eclipse.jem.java:JavaDataType java:/#int" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="60" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" bound="true" readMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#TreeSelectionModel.getSelectionMode(" writeMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#TreeSelectionModel.setSelectionMode(int"/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="selectionCount" eType="org.eclipse.jem.java:JavaDataType java:/#int" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="52" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" bound="true" readMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#TreeSelectionModel.getSelectionCount("/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="selectionPaths" eType="org.eclipse.jem.java:ArrayType java:/javax.swing.tree#TreePath[]" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="60" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" bound="true" readMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#TreeSelectionModel.getSelectionPaths(" writeMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#TreeSelectionModel.setSelectionPaths(javax.swing.tree.TreePath[]"/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="minSelectionRow" eType="org.eclipse.jem.java:JavaDataType java:/#int" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="52" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" bound="true" readMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#TreeSelectionModel.getMinSelectionRow("/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="selectionRows" eType="org.eclipse.jem.java:ArrayType java:/#int[]" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="52" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" bound="true" readMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#TreeSelectionModel.getSelectionRows("/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="maxSelectionRow" eType="org.eclipse.jem.java:JavaDataType java:/#int" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="52" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" bound="true" readMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#TreeSelectionModel.getMaxSelectionRow("/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="rowMapper" eType="org.eclipse.jem.java:JavaClass java:/javax.swing.tree#RowMapper" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="60" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" bound="true" readMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#TreeSelectionModel.getRowMapper(" writeMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#TreeSelectionModel.setRowMapper(javax.swing.tree.RowMapper"/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:BeanEvent" name="treeSelection">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:EventSetDecorator" implicitlySetBits="25" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" addListenerMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#TreeSelectionModel.addTreeSelectionListener(javax.swing.event.TreeSelectionListener" listenerType="org.eclipse.jem.java:JavaClass java:/javax.swing.event#TreeSelectionListener" removeListenerMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#TreeSelectionModel.removeTreeSelectionListener(javax.swing.event.TreeSelectionListener"/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:BeanEvent" name="propertyChange">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:EventSetDecorator" implicitlySetBits="25" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" addListenerMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#TreeSelectionModel.addPropertyChangeListener(java.beans.PropertyChangeListener" listenerType="org.eclipse.jem.java:JavaClass java:/java.beans#PropertyChangeListener" removeListenerMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#TreeSelectionModel.removePropertyChangeListener(java.beans.PropertyChangeListener"/>
+  </objectsToAttach>
+</change:ChangeDescription>

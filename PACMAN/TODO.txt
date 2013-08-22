@@ -1,0 +1,21 @@
+- Revisar ACasa y Salida - Suavizar salida ^^
+- ¿solucionadas transiciones entre estados?
+- Mejores IAs
+- Menu?
+- VisionDirecta - Parece que solo te ve en algunos casos
+- Manhattan - Problemas con el teletransporte!
+
+Nuevas Características:
+
+- Blinky (Rojo) en lvl 1 tiene Vision Directa como Comportamiento (IA)
+- Clide (Naranja) en lvl 1 tiene Distancia de Manhattan como Comportamiento (IA)
+- Si el comportamiento NO es aleatorio, los fantasmas con miedo huiran del Pacman
+mediante distancia de Manhattan (esto provoca que se arrinconen mientras pacman no les
+ataque)
+- La velocidad de los fantasmas aumenta con el nivel (hasta un maximo,
+dependiente de cada fantasma) y disminuye el tiempo de miedo.
+
+Problemas menores:
+Atascos varios
+- Manhattan... medio arreglado
+- Resto, sin mirar

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<session version="1.0">
+<refactoring comment="Rename package 'search.method' to 'search.general.method'&#13;&#10;- Original element: 'IA/src/search.method'&#13;&#10;- Renamed element: 'IA/src/search.general.method'&#13;&#10;- Update references to refactored element&#13;&#10;- Update textual occurrences in comments and strings" description="Rename package 'search.method'" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;search.method" name="search.general.method" qualified="false" references="true" stamp="1158151553031" textual="false" version="1.0"/>
+</session>

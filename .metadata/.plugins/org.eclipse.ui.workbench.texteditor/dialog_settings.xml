@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="89" key="DIALOG_Y_ORIGIN"/>
+		<item value="696" key="DIALOG_X_ORIGIN"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="wrap"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="isRegEx"/>
+		<item value="false" key="incremental"/>
+		<item value="false" key="wholeword"/>
+		<item value="" key="selection"/>
+		<list key="findhistory">
+			<item value="c.setLayout(gbl);"/>
+			<item value="cpu"/>
+			<item value="fantasma.setVerticalMovement(tablero"/>
+			<item value="fantasma.setHorizontalMovement(tablero"/>
+			<item value=",99,99,99,99,99,99,99,99,99,99,99,99},"/>
+			<item value=".bmp"/>
+			<item value="&quot;..&quot;+File.separator+"/>
+			<item value="(&quot;"/>
+		</list>
+		<list key="replacehistory">
+			<item value=""/>
+			<item value="memoria"/>
+			<item value="f.setVerticalMovement(t"/>
+			<item value="f.setHorizontalMovement(t"/>
+			<item value="},"/>
+			<item value=".png"/>
+			<item value="(&quot;..&quot;+File.separator+&quot;"/>
+			<item value="(&quot;..&quot;+File.separator+"/>
+		</list>
+	</section>
+</section>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit 'iu.MIJFileChooser.java' to 'MiJFileChooser.java'&#13;&#10;- Original element: 'iu.MIJFileChooser.java'&#13;&#10;- Renamed element: 'iu.MiJFileChooser.java'" description="Rename compilation unit 'MIJFileChooser.java'" flags="589830" id="org.eclipse.jdt.ui.rename.compilationunit" input="/&lt;iu{MIJFileChooser.java" name="MiJFileChooser.java" stamp="1181751247640" version="1.0"/>
+</session>

@@ -1,0 +1,130 @@
+package iu;
+
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.FileInputStream;
+import java.security.KeyStore;
+import java.util.ArrayList;
+import java.util.Enumeration;
+
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
+import crypto.Certificados;
+
+public class Exportar extends JFrame implements ActionListener{
+
+	private String[] certificados;
+	private JComboBox listaCerts;
+	
+	private JLabel jlAlias = new JLabel("Alias:");
+	private JLabel jlFile = new JLabel("Fichero:");
+	private JLabel jlKeypass = new JLabel("Contraseña del certificado:");
+	private char[] storepass;
+	private String keystore;
+	
+	private JTextField tfFile = new JTextField(20);
+	private JPasswordField tfKeypass = new JPasswordField(20);
+	
+	public Exportar(File keystore){
+		if(keystore != null)
+			this.keystore = "\""+keystore.getAbsolutePath()+"\"";
+		else
+			this.keystore = System.getProperty("user.home")+"\\.keystore";
+		new KeyStoreOpen(this);
+	}
+	
+	public void mostrar(){
+		this.setTitle("Exportar certificado");
+		this.setSize(500,500);
+		
+		listaCerts = new JComboBox(certificados);
+
+		this.add(listaCerts);
+		
+		this.setVisible(true);
+	}
+	
+	public void setCertificados(String[] certificados) {
+		this.certificados = certificados;
+	}
+
+	public void setStorepass(char[] storepass) {
+		this.storepass = storepass;
+	}
+	
+	public String getKeystorePath(){
+		return keystore;
+	}
+
+	public void actionPerformed(ActionEvent e) {
+	}
+	
+}
+
+class KeyStoreOpen extends JFrame implements ActionListener{
+
+	private JButton jbOK = new JButton("Aceptar");
+	private JButton jbCancel = new JButton("Cancelar");
+	private JLabel jlPass = new JLabel("Contraseña del Keystore");
+	private JPasswordField jpPass = new JPasswordField(20);
+	private JLabel info = new JLabel();
+	
+	private Exportar exportar;
+	
+	public KeyStoreOpen(Exportar exp){
+		super("Abrir Keystore");
+		this.setSize(200,200);
+		
+		info.setText("Keystore: "+exp.getKeystorePath());
+		info.setToolTipText("Si desea modificar el Keystore actual, hágalo en la ventana principal de la aplicación");
+		
+		this.setLayout(new GridLayout());
+		
+		this.getContentPane().add(jlPass);
+		this.getContentPane().add(jpPass);
+		this.getContentPane().add(info);
+		this.getContentPane().add(jbOK);
+		this.getContentPane().add(jbCancel);
+		
+		exportar = exp;
+		
+		jbOK.addActionListener(this);
+		jbCancel.addActionListener(this);
+		
+		this.setVisible(true);
+	}
+	
+	public void actionPerformed(ActionEvent e) {
+		try{
+			if(((JButton)e.getSource()).equals(jbOK)){
+				Certificados cert = new Certificados();
+				ArrayList<String> al = cert.listaCertificados(jpPass.getPassword(), exportar.getKeystorePath());
+				String[] lista = new String[al.size()];
+				for(int i = 0; i < al.size(); i++){
+					lista[i] = al.get(i);
+					System.out.println(lista[i]);
+				}
+				exportar.setCertificados(lista);
+				
+				// Comprobar que todo OK, sino, informar
+				
+				exportar.mostrar();
+				
+				this.dispose();
+			}
+			if(((JButton)e.getSource()).equals(jbCancel)){
+				this.dispose();
+			}
+		}catch(Exception ex){
+			System.out.println(e.getSource());
+		}		
+	}
+	
+}

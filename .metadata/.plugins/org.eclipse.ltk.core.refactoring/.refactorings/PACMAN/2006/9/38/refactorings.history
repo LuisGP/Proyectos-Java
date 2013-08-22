@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource '/PACMAN/media/alb_pacman' to 'pacman'&#13;&#10;- Original element: 'alb_pacman'" description="Rename resource 'alb_pacman'" flags="7" id="org.eclipse.jdt.ui.rename.resource" input="media/alb_pacman" name="pacman" stamp="1158626776312" version="1.0"/>
+</session>

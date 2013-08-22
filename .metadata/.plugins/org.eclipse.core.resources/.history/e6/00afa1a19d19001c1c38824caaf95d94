@@ -1,0 +1,311 @@
+package iu;
+
+import javax.swing.JButton;
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
+
+import javax.swing.JTabbedPane;
+import javax.swing.filechooser.FileFilter;
+
+public class Interfaz implements ActionListener{
+
+	private JFrame jFrame = null;
+	private JFrame selFichero = null;
+	private MiJFileChooser jFileChooser = null;
+	private JLabel jlFichero = new JLabel(System.getProperty("user.home")+"\\.keystore");
+	
+	private File fichero = null;
+	
+	private JPanel jGestCertPane = null;
+	private JPanel jFirmarPane = null;
+	private JPanel jCheckFirmaPane = null;
+	private JPanel jCheckMDPane = null;
+	private JPanel jCifrarPane = null;
+	private JTabbedPane jTabbedPane = null;
+	
+	private JButton btFile = null;
+	private JButton btImportar = null;
+	private JButton btExportar = null;
+	private JButton btListado = null;
+	private JButton btCrear = null;
+
+	public Interfaz(){
+		getJFrame();
+		jFrame.setVisible(true);
+		jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+	
+	public void setFichero(File f){
+		fichero = f;
+		//getGestCertPane().add(new JLabel(fichero.getName()), BorderLayout.CENTER);
+		jlFichero.setText(fichero.getAbsolutePath());
+		jFrame.repaint();
+	}
+	
+	public File getFichero(){
+		return fichero;
+	}
+	
+	private void selectorFicheros(){
+		selFichero = new JFrame("Selecciones el KeyStore");
+		jFileChooser = new MiJFileChooser(selFichero, this);
+		FiltroKS filtro = new FiltroKS();
+		jFileChooser.addChoosableFileFilter(filtro);
+		selFichero.getContentPane().add(jFileChooser);
+		selFichero.setSize(selFichero.getPreferredSize());
+		selFichero.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+		//jFileChooser.addActionListener(this);
+		selFichero.setVisible(true);		
+	}
+	
+	private JFrame getJFrame() {
+		if (jFrame == null) {
+			jFrame = new JFrame();
+			jFrame.setSize(new Dimension(470, 279));
+			jFrame.setTitle("Practica SI");
+			jFrame.setContentPane(getJTabbedPane());
+		}
+		return jFrame;
+	}
+
+	private JPanel getGestCertPane() {
+		if (jGestCertPane == null) {
+			jGestCertPane = new JPanel();
+			//jGestCertPane.setLayout(new BorderLayout());
+			GridBagLayout gbl = new GridBagLayout();
+			GridBagConstraints gbc = new GridBagConstraints();
+			jGestCertPane.setLayout(gbl);
+			
+			gbc.weightx = 1;
+			gbc.weighty = 1;
+			
+			JLabel jl = new JLabel("Gestion de Certificados");
+			gbc.gridx = 0;
+			gbc.gridy = 0;
+			gbl.setConstraints(jl, gbc);			
+			jGestCertPane.add(jl);
+			
+			btCrear = new JButton("Crear Certificado Autofirmado");
+			btCrear.addActionListener(this);
+			btCrear.setToolTipText("Permite la creación de certificados autofirmados en el almacén de claves actual");
+			gbc.gridx = 0;
+			gbc.gridy = 1; 
+			gbl.setConstraints(btCrear, gbc);
+			jGestCertPane.add(btCrear);
+			
+			JPanel panel0 = new JPanel();
+			GridBagLayout gbl0 = new GridBagLayout();
+			panel0.setLayout(gbl0);
+			btImportar = new JButton("Importar Certificado");
+			btImportar.addActionListener(this);
+			btImportar.setToolTipText("Utilidad para la importación de certificados en el almacén de claves actual");
+			JPanel panela = new JPanel();
+			gbc.gridx = 0;
+			gbc.gridy = 0; 
+			panela.add(btImportar);
+			gbl0.setConstraints(panela, gbc);
+			panel0.add(panela);
+			btExportar = new JButton("Exportar Certificado");
+			btExportar.addActionListener(this);
+			btExportar.setToolTipText("Guarda un certificado contenido en el almacén de claves con otro formato");
+			JPanel panelb = new JPanel();
+			gbc.gridx = 1;
+			gbc.gridy = 0;
+			panelb.add(btExportar);
+			gbl0.setConstraints(panelb, gbc);
+			panel0.add(panelb);
+			gbc.gridx = 0;
+			gbc.gridy = 2;
+			gbl.setConstraints(panel0, gbc);
+			jGestCertPane.add(panel0);
+			
+			JPanel panel1 = new JPanel();
+			GridBagLayout gbl1 = new GridBagLayout();
+			panel1.setLayout(gbl1);
+			btListado = new JButton("Listar Certificados");
+			btListado.addActionListener(this);
+			btListado.setToolTipText("Muestra una lista con los certificados contenidos en el almacén de claves actual");
+			JPanel panelc = new JPanel();
+			gbc.gridx = 0;
+			gbc.gridy = 0; 
+			panelc.add(btListado);
+			gbl1.setConstraints(panelc, gbc);
+			panel1.add(panelc);
+			btFile = new JButton("Seleccione KeyStore");
+			btFile.addActionListener(this);
+			btFile.setToolTipText("Permite elegir un fichero de almacén de claves");
+			JPanel paneld = new JPanel();
+			gbc.gridx = 1;
+			gbc.gridy= 0;
+			paneld.add(btFile);
+			gbl1.setConstraints(paneld, gbc);
+			panel1.add(paneld);
+			gbc.gridx = 0;
+			gbc.gridy = 3;
+			gbl.setConstraints(panel1, gbc);
+			jGestCertPane.add(panel1);
+			
+			JPanel panel2 = new JPanel();
+			GridBagLayout gbl2 = new GridBagLayout();
+			panel2.setLayout(gbl2);
+			JLabel jlFile = new JLabel("KeyStore: ");
+			jlFile.setToolTipText("Almacén de claves actual");
+			gbc.gridx = 0;
+			gbc.gridy= 0;
+			gbl2.setConstraints(jlFile, gbc);
+			panel2.add(jlFile);			
+			gbc.gridx = 1;
+			gbc.gridy= 0;
+			gbl2.setConstraints(jlFichero, gbc);
+			panel2.add(jlFichero);		
+			jlFichero.setToolTipText("Almacén de claves actual");
+			gbc.gridx = 0;
+			gbc.gridy = 4;
+			gbl.setConstraints(panel2, gbc);
+			jGestCertPane.add(panel2);
+			
+		}
+		return jGestCertPane;
+	}
+	
+	private JPanel getFirmarPane() {
+		if (jFirmarPane == null) {
+			jFirmarPane = new JPanel();
+			jFirmarPane.setLayout(new BorderLayout());
+			jFirmarPane.add(new JLabel("Firmar"), BorderLayout.NORTH);
+		}
+		return jFirmarPane;
+	}
+
+	private JPanel getCheckFirmaPane() {
+		if (jCheckFirmaPane == null) {
+			jCheckFirmaPane = new JPanel();
+			jCheckFirmaPane.setLayout(new BorderLayout());
+			jCheckFirmaPane.add(new JLabel("Check Firma"), BorderLayout.NORTH);
+		}
+		return jCheckFirmaPane;
+	}
+	
+	private JPanel getCheckMDPane() {
+		if (jCheckMDPane == null) {
+			jCheckMDPane = new JPanel();
+			jCheckMDPane.setLayout(new BorderLayout());
+			jCheckMDPane.add(new JLabel("Check MD"), BorderLayout.NORTH);
+		}
+		return jCheckMDPane;
+	}
+	
+	private JPanel getCifrarPane() {
+		if (jCifrarPane == null) {
+			jCifrarPane = new JPanel();
+			jCifrarPane.setLayout(new BorderLayout());
+			jCifrarPane.add(new JLabel("Cifrar"), BorderLayout.NORTH);
+		}
+		return jCifrarPane;
+	}
+	
+	private JTabbedPane getJTabbedPane() {
+		if (jTabbedPane == null) {
+			jTabbedPane = new JTabbedPane();
+			jTabbedPane.addTab("Gestión de Certificados", getGestCertPane());
+			jTabbedPane.addTab("Firmar Fichero",getFirmarPane());
+			jTabbedPane.addTab("Comprobar firma de un fichero", getCheckFirmaPane());
+			jTabbedPane.addTab("Comprobar resumen de un fichero", getCheckMDPane());
+			jTabbedPane.addTab("Cifrar/Descifrar un fichero", getCifrarPane());
+			jTabbedPane.setToolTipTextAt(0, "Creación, importación, exportación y listado de certificados. " +
+					"Permite elegir Keystore.");
+			jTabbedPane.setToolTipTextAt(1, "Firmar digitalmente un fichero con un certificado.");
+			jTabbedPane.setToolTipTextAt(2, "Verificar la corrección de la firma en un fichero para autenticar a su autor.");
+			jTabbedPane.setToolTipTextAt(3, "Comprobar un resumen de un fichero para confirmar su integridad.");
+			jTabbedPane.setToolTipTextAt(4, "Cifrar o descifrar un fichero para ocultar o recuperar su información.");	
+		}
+		return jTabbedPane;
+	}
+
+	static public void main(String[] args){
+		new Interfaz();
+	}
+
+	public void actionPerformed(ActionEvent e) {
+		// Botón?
+		try{
+			if(((JButton)e.getSource()).equals(btFile)){
+				selectorFicheros();
+			}
+			if(((JButton)e.getSource()).equals(btCrear)){
+				new CrearCertificado(this.fichero);
+			}
+		}catch(Exception ex){
+			//System.out.println(e.getSource());
+		}
+	}
+}
+
+class FiltroKS extends FileFilter{
+
+	@Override
+	public boolean accept(File f) {
+		String nombre = f.getName();
+		if(nombre.contains("keystore"))
+			return true;
+		if(f.isDirectory())
+			return true;
+		return false;
+	}
+
+	@Override
+	public String getDescription() {
+		// TODO Auto-generated method stub
+		return "Ficheros de KeyStore Java (*.keystore)";
+	}
+	
+}
+
+class FiltroCer extends FileFilter{
+
+	@Override
+	public boolean accept(File f) {
+		String nombre = f.getName();
+		if(nombre.contains(".cer"))
+			return true;
+		if(f.isDirectory())
+			return true;
+		return false;
+	}
+
+	@Override
+	public String getDescription() {
+		// TODO Auto-generated method stub
+		return "Ficheros de Certificado (*.cer)";
+	}
+	
+}
+
+class MiJFileChooser extends JFileChooser{
+	private JFrame jf = null;
+	private Interfaz iu = null;
+	
+	public MiJFileChooser(JFrame jf, Interfaz root){
+		this.jf = jf;
+		this.iu = root;		
+	}
+	
+	public void approveSelection() {
+		iu.setFichero(this.getSelectedFile());
+		//System.out.println(fichero);
+		jf.setVisible(false);
+	}
+	
+	public void cancelSelection(){
+		jf.setVisible(false);
+	}
+}

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libraryInfos>
+<libraryInfo home="K:\Archivos de programa\Java\jdk1.6.0_01" version="1.6.0_01">
+<bootpath>
+<entry path="K:\Archivos de programa\Java\jdk1.6.0_01\jre\lib\resources.jar"/>
+<entry path="K:\Archivos de programa\Java\jdk1.6.0_01\jre\lib\rt.jar"/>
+<entry path="K:\Archivos de programa\Java\jdk1.6.0_01\jre\lib\sunrsasign.jar"/>
+<entry path="K:\Archivos de programa\Java\jdk1.6.0_01\jre\lib\jsse.jar"/>
+<entry path="K:\Archivos de programa\Java\jdk1.6.0_01\jre\lib\jce.jar"/>
+<entry path="K:\Archivos de programa\Java\jdk1.6.0_01\jre\lib\charsets.jar"/>
+<entry path="K:\Archivos de programa\Java\jdk1.6.0_01\jre\classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="K:\Archivos de programa\Java\jdk1.6.0_01\jre\lib\ext"/>
+<entry path="K:\WINDOWS\Sun\Java\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="K:\Archivos de programa\Java\jdk1.6.0_01\jre\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+<libraryInfo home="K:\Archivos de programa\Java\jre1.6.0_01" version="1.6.0_01">
+<bootpath>
+<entry path="K:\Archivos de programa\Java\jre1.6.0_01\lib\resources.jar"/>
+<entry path="K:\Archivos de programa\Java\jre1.6.0_01\lib\rt.jar"/>
+<entry path="K:\Archivos de programa\Java\jre1.6.0_01\lib\sunrsasign.jar"/>
+<entry path="K:\Archivos de programa\Java\jre1.6.0_01\lib\jsse.jar"/>
+<entry path="K:\Archivos de programa\Java\jre1.6.0_01\lib\jce.jar"/>
+<entry path="K:\Archivos de programa\Java\jre1.6.0_01\lib\charsets.jar"/>
+<entry path="K:\Archivos de programa\Java\jre1.6.0_01\classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="K:\Archivos de programa\Java\jre1.6.0_01\lib\ext"/>
+<entry path="K:\WINDOWS\Sun\Java\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="K:\Archivos de programa\Java\jre1.6.0_01\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+<libraryInfo home="K:\Archivos de programa\Java\jre1.5.0_06" version="1.5.0_06">
+<bootpath>
+<entry path="K:\Archivos de programa\Java\jre1.5.0_06\lib\rt.jar"/>
+<entry path="K:\Archivos de programa\Java\jre1.5.0_06\lib\i18n.jar"/>
+<entry path="K:\Archivos de programa\Java\jre1.5.0_06\lib\sunrsasign.jar"/>
+<entry path="K:\Archivos de programa\Java\jre1.5.0_06\lib\jsse.jar"/>
+<entry path="K:\Archivos de programa\Java\jre1.5.0_06\lib\jce.jar"/>
+<entry path="K:\Archivos de programa\Java\jre1.5.0_06\lib\charsets.jar"/>
+<entry path="K:\Archivos de programa\Java\jre1.5.0_06\classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="K:\Archivos de programa\Java\jre1.5.0_06\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="K:\Archivos de programa\Java\jre1.5.0_06\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+</libraryInfos>

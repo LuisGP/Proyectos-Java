@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<change:ChangeDescription xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:change="http://www.eclipse.org/emf/2003/Change" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.jem.internal.beaninfo.beaninfo="http:///org/eclipse/jem/internal/beaninfo/beaninfo.ecore" xmlns:org.eclipse.jem.java="java.xmi">
+  <objectChanges xsi:type="change:EObjectToChangesMapEntry" key="org.eclipse.jem.java:JavaClass java:/javax.swing.tree#DefaultTreeCellRenderer">
+    <value xsi:type="change:FeatureChange" featureName="eAnnotations">
+      <listChanges xsi:type="change:ListChange" referenceValues="#//@objectsToAttach.0"/>
+    </value>
+    <value xsi:type="change:FeatureChange" featureName="eStructuralFeatures">
+      <listChanges xsi:type="change:ListChange" referenceValues="#//@objectsToAttach.1 #//@objectsToAttach.2 #//@objectsToAttach.3 #//@objectsToAttach.4 #//@objectsToAttach.5 #//@objectsToAttach.6 #//@objectsToAttach.7 #//@objectsToAttach.8 #//@objectsToAttach.9 #//@objectsToAttach.10 #//@objectsToAttach.11"/>
+    </value>
+  </objectChanges>
+  <objectsToAttach xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:BeanDecorator" implicitDecoratorFlag="IMPLICIT_DECORATOR"/>
+  <objectsToAttach xsi:type="ecore:EReference" name="defaultClosedIcon" eType="org.eclipse.jem.java:JavaClass java:/javax.swing#Icon" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="52" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" bound="true" readMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#DefaultTreeCellRenderer.getDefaultClosedIcon("/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="textSelectionColor" eType="org.eclipse.jem.java:JavaClass java:/java.awt#Color" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="60" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" bound="true" readMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#DefaultTreeCellRenderer.getTextSelectionColor(" writeMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#DefaultTreeCellRenderer.setTextSelectionColor(java.awt.Color"/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="openIcon" eType="org.eclipse.jem.java:JavaClass java:/javax.swing#Icon" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="60" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" bound="true" readMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#DefaultTreeCellRenderer.getOpenIcon(" writeMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#DefaultTreeCellRenderer.setOpenIcon(javax.swing.Icon"/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="borderSelectionColor" eType="org.eclipse.jem.java:JavaClass java:/java.awt#Color" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="60" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" bound="true" readMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#DefaultTreeCellRenderer.getBorderSelectionColor(" writeMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#DefaultTreeCellRenderer.setBorderSelectionColor(java.awt.Color"/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="defaultLeafIcon" eType="org.eclipse.jem.java:JavaClass java:/javax.swing#Icon" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="52" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" bound="true" readMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#DefaultTreeCellRenderer.getDefaultLeafIcon("/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="defaultOpenIcon" eType="org.eclipse.jem.java:JavaClass java:/javax.swing#Icon" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="52" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" bound="true" readMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#DefaultTreeCellRenderer.getDefaultOpenIcon("/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="backgroundSelectionColor" eType="org.eclipse.jem.java:JavaClass java:/java.awt#Color" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="60" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" bound="true" readMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#DefaultTreeCellRenderer.getBackgroundSelectionColor(" writeMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#DefaultTreeCellRenderer.setBackgroundSelectionColor(java.awt.Color"/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="closedIcon" eType="org.eclipse.jem.java:JavaClass java:/javax.swing#Icon" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="60" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" bound="true" readMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#DefaultTreeCellRenderer.getClosedIcon(" writeMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#DefaultTreeCellRenderer.setClosedIcon(javax.swing.Icon"/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="leafIcon" eType="org.eclipse.jem.java:JavaClass java:/javax.swing#Icon" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="60" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" bound="true" readMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#DefaultTreeCellRenderer.getLeafIcon(" writeMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#DefaultTreeCellRenderer.setLeafIcon(javax.swing.Icon"/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="textNonSelectionColor" eType="org.eclipse.jem.java:JavaClass java:/java.awt#Color" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="60" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" bound="true" readMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#DefaultTreeCellRenderer.getTextNonSelectionColor(" writeMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#DefaultTreeCellRenderer.setTextNonSelectionColor(java.awt.Color"/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="backgroundNonSelectionColor" eType="org.eclipse.jem.java:JavaClass java:/java.awt#Color" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="60" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" bound="true" readMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#DefaultTreeCellRenderer.getBackgroundNonSelectionColor(" writeMethod="org.eclipse.jem.java:Method java:/javax.swing.tree#DefaultTreeCellRenderer.setBackgroundNonSelectionColor(java.awt.Color"/>
+  </objectsToAttach>
+</change:ChangeDescription>

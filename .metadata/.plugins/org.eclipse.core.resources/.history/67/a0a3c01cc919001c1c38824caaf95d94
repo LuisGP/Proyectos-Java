@@ -1,0 +1,24 @@
+package iu;
+
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+
+class MiJFileChooser extends JFileChooser{
+	private JFrame jf = null;
+	private Interfaz iu = null;
+	
+	public MiJFileChooser(JFrame jf, Interfaz root){
+		this.jf = jf;
+		this.iu = root;		
+	}
+	
+	public void approveSelection() {
+		iu.setFichero(this.getSelectedFile());
+		//System.out.println(fichero);
+		jf.setVisible(false);
+	}
+	
+	public void cancelSelection(){
+		jf.setVisible(false);
+	}
+}

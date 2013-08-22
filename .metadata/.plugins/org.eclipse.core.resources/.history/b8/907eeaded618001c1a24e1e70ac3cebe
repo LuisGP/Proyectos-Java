@@ -1,0 +1,292 @@
+package iu;
+
+import java.awt.Container;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
+
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
+public class CrearCertificado extends JFrame implements ActionListener{
+	private JLabel CN = new JLabel("Nombre completo: ");
+	private JLabel OU = new JLabel("Unidad de organización: ");
+	private JLabel O = new JLabel("Organización: ");
+	private JLabel L = new JLabel("Localidad: ");
+	private JLabel S = new JLabel("Estado o provincia: ");
+	private JLabel C = new JLabel("Pais (Código de 2 letras): ");
+	
+	private JLabel alias = new JLabel("Alias: ");
+	private JLabel keyalg = new JLabel("Algoritmo para la Clave: ");
+	private JLabel sigalg = new JLabel("Algoritmo de firmado: ");
+	private JLabel keysize = new JLabel("Tamaño de la Clave: ");
+	//private JLabel dname = new JLabel("Nombre completo: ");
+	private JLabel validity = new JLabel("Validez (días): ");
+	private JLabel keypass = new JLabel("Contraseña certificado: ");
+	private JLabel keystore = new JLabel("Keystore: ");
+	private JLabel storepass = new JLabel("Contraseña keystore: ");
+	private JLabel storetype = new JLabel("Tipo de Keystore: ");
+	
+	private JTextField tfCN = new JTextField(500);
+	private JTextField tfOU = new JTextField(50);
+	private JTextField tfO = new JTextField(50);
+	private JTextField tfL = new JTextField(50);
+	private JTextField tfS = new JTextField(50);
+	private JTextField tfC = new JTextField(50);
+	
+	private JTextField tfAlias = new JTextField(50);
+	private JTextField tfKeyalg = new JTextField(50);
+	private JTextField tfSigalg = new JTextField(50);
+	private JTextField tfKeysize = new JTextField(50);
+	private JTextField tfValidity = new JTextField(50);
+	private JPasswordField tfKeypass = new JPasswordField(50);
+	private JLabel tfKeystore = new JLabel();
+	private JPasswordField tfStorepass = new JPasswordField(50);
+	private JTextField tfStoretype = new JTextField(50);
+	
+	private JButton ok = new JButton("Crear");
+	private JButton cancel = new JButton("Cancelar");
+	
+	public CrearCertificado(File keystore){
+		super("Crear Certificado Autofirmado");
+		
+		if(keystore != null)
+			JOptionPane.showMessageDialog(this, keystore.getAbsolutePath(), "WOW", JOptionPane.INFORMATION_MESSAGE);
+		else
+			JOptionPane.showMessageDialog(this, "Por defecto", "WOW", JOptionPane.INFORMATION_MESSAGE);
+		
+		this.setSize(400,500);
+		
+		GridBagLayout gbl = new GridBagLayout();
+		GridBagConstraints gbc = new GridBagConstraints();
+		Container c = this.getContentPane();
+		
+		gbc.fill = GridBagConstraints.BOTH;
+		gbc.weighty = 1;
+		gbc.weightx = 1;
+		
+		// Datos del certificado
+		JPanel jp1 = new JPanel();
+		c.setLayout(gbl);
+		gbc.gridx = 0;
+		gbc.gridy = 0;
+		jp1.add(CN);
+		gbl.setConstraints(jp1, gbc);
+		c.add(jp1);
+		
+		JPanel jp1b = new JPanel(); 
+		gbc.gridx = 1;
+		gbc.gridy = 0;
+		jp1b.add(tfCN);
+		gbl.setConstraints(jp1b, gbc);
+		c.add(jp1b);
+		
+		JPanel jp2 = new JPanel();
+		gbc.gridx = 0;
+		gbc.gridy = 1;
+		jp2.add(OU);
+		gbl.setConstraints(jp2, gbc);
+		c.add(jp2);
+		
+		JPanel jp2b = new JPanel();
+		gbc.gridx = 1;
+		gbc.gridy = 1;
+		jp2b.add(tfOU);
+		gbl.setConstraints(jp2b, gbc);
+		c.add(jp2b);
+		
+		JPanel jp3 = new JPanel();
+		gbc.gridx = 0;
+		gbc.gridy = 2;
+		jp3.add(O);
+		gbl.setConstraints(jp3, gbc);
+		c.add(jp3);
+		
+		JPanel jp3b = new JPanel();
+		gbc.gridx = 1;
+		gbc.gridy = 2;
+		jp3b.add(tfO);
+		gbl.setConstraints(jp3b, gbc);
+		c.add(jp3b);
+		
+		JPanel jp4 = new JPanel();
+		gbc.gridx = 0;
+		gbc.gridy = 3;
+		jp4.add(L);
+		gbl.setConstraints(jp4, gbc);
+		c.add(jp4);
+		
+		JPanel jp4b = new JPanel();
+		gbc.gridx = 1;
+		gbc.gridy = 3;
+		jp4b.add(tfL);
+		gbl.setConstraints(jp4b, gbc);
+		c.add(jp4b);
+		
+		JPanel jp5 = new JPanel();
+		gbc.gridx = 0;
+		gbc.gridy = 4;
+		jp5.add(S);
+		gbl.setConstraints(jp5, gbc);
+		c.add(jp5);
+		
+		JPanel jp5b = new JPanel();
+		gbc.gridx = 1;
+		gbc.gridy = 4;
+		jp5b.add(tfS);
+		gbl.setConstraints(jp5b, gbc);
+		c.add(jp5b);
+		
+		JPanel jp6 = new JPanel();
+		gbc.gridx = 0;
+		gbc.gridy = 5;
+		jp6.add(C);
+		gbl.setConstraints(jp6, gbc);
+		c.add(jp6);
+		
+		JPanel jp6b = new JPanel();
+		gbc.gridx = 1;
+		gbc.gridy = 5;
+		jp6b.add(tfC);
+		gbl.setConstraints(jp6b, gbc);
+		c.add(jp6b);
+		
+		// Datos del keystore
+		JPanel jp7 = new JPanel();
+		gbc.gridx = 0;
+		gbc.gridy = 6;
+		gbl.setConstraints(alias, gbc);
+		c.add(alias);
+		
+		JPanel jp7b = new JPanel();
+		gbc.gridx = 1;
+		gbc.gridy = 5;
+		jp7b.add(tfAlias);
+		gbl.setConstraints(jp7b, gbc);
+		c.add(jp7b);
+		
+		JPanel jp8 = new JPanel();
+		gbc.gridx = 0;
+		gbc.gridy = 7;
+		gbl.setConstraints(keyalg, gbc);
+		c.add(keyalg);
+		
+		JPanel jp8b = new JPanel();
+		gbc.gridx = 1;
+		gbc.gridy = 5;
+		jp8b.add(tfKeyalg);
+		gbl.setConstraints(jp8b, gbc);
+		c.add(jp8b);
+		
+		JPanel jp9 = new JPanel();
+		gbc.gridx = 0;
+		gbc.gridy = 8;
+		gbl.setConstraints(sigalg, gbc);
+		c.add(sigalg);
+		
+		JPanel jp9b = new JPanel();
+		gbc.gridx = 1;
+		gbc.gridy = 5;
+		jp9b.add(tfSigalg);
+		gbl.setConstraints(jp9b, gbc);
+		c.add(jp9b);
+		
+		JPanel jp10 = new JPanel();
+		gbc.gridx = 0;
+		gbc.gridy = 9;
+		gbl.setConstraints(keysize, gbc);
+		c.add(keysize);
+		
+		JPanel jp10b = new JPanel();
+		gbc.gridx = 1;
+		gbc.gridy = 5;
+		jp10b.add(tfKeysize);
+		gbl.setConstraints(jp10b, gbc);
+		c.add(jp10b);
+		
+		JPanel jp11 = new JPanel();
+		gbc.gridx = 0;
+		gbc.gridy = 10;
+		gbl.setConstraints(validity, gbc);
+		c.add(validity);
+		
+		JPanel jp11b = new JPanel();
+		gbc.gridx = 1;
+		gbc.gridy = 5;
+		jp11b.add(tfValidity);
+		gbl.setConstraints(jp11b, gbc);
+		c.add(jp11b);
+		
+		JPanel jp12 = new JPanel();
+		gbc.gridx = 0;
+		gbc.gridy = 11;
+		gbl.setConstraints(keypass, gbc);
+		c.add(keypass);
+		
+		JPanel jp12b = new JPanel();
+		gbc.gridx = 1;
+		gbc.gridy = 5;
+		jp12b.add(tfKeypass);
+		gbl.setConstraints(jp12b, gbc);
+		c.add(jp12b);
+		
+		JPanel jp13 = new JPanel();
+		gbc.gridx = 0;
+		gbc.gridy = 12;
+		gbl.setConstraints(this.keystore, gbc);
+		c.add(this.keystore);
+		
+		JPanel jp13b = new JPanel();
+		gbc.gridx = 1;
+		gbc.gridy = 5;
+		jp13b.add(tfKeystore);
+		gbl.setConstraints(jp13b, gbc);
+		c.add(jp13b);
+		
+		JPanel jp14 = new JPanel();
+		gbc.gridx = 0;
+		gbc.gridy = 13;
+		gbl.setConstraints(storepass, gbc);
+		c.add(storepass);
+		
+		JPanel jp14b = new JPanel();
+		gbc.gridx = 1;
+		gbc.gridy = 5;
+		jp14b.add(tfStorepass);
+		gbl.setConstraints(jp14b, gbc);
+		c.add(jp14b);
+		
+		JPanel jp15 = new JPanel();
+		gbc.gridx = 0;
+		gbc.gridy = 14;
+		gbl.setConstraints(storetype, gbc);
+		c.add(storetype);
+		
+		JPanel jp15b = new JPanel();
+		gbc.gridx = 1;
+		gbc.gridy = 5;
+		jp15b.add(tfStoretype);
+		gbl.setConstraints(jp15b, gbc);
+		c.add(jp15b);
+		
+		// Botones OK y Cancel
+		JPanel jp16 = new JPanel();
+		JPanel jp17 = new JPanel();
+		
+		this.setVisible(true);
+	}
+	
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit 'Main.java' to 'LWJGLGameWindow.java'&#13;&#10;- Original element: 'Main.java'&#13;&#10;- Renamed element: 'LWJGLGameWindow.java'" description="Rename compilation unit 'Main.java'" flags="589830" id="org.eclipse.jdt.ui.rename.compilationunit" input="/&lt;{Main.java" name="LWJGLGameWindow.java" stamp="1158447919171" version="1.0"/>
+</session>

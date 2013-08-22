@@ -1,0 +1,208 @@
+package crypto;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.security.KeyStore;
+import java.util.Enumeration;
+
+public class Certificados {
+	private KeyStore ks;
+	private File fileKeyStore;
+	private char[] password = new char[] {'c','h','a','n','g','e','i','t'};
+	private String keyStorePath = null;
+	
+	public Certificados(){
+		try{
+			ks = KeyStore.getInstance("JCEKS");
+		}catch(Exception e){
+			System.out.println("Error: "+e.getMessage());
+		}
+	}
+	
+	public String crearAutofirmado(String alias, String keyalg, String sigalg,
+			Integer keysize, Integer validity, String keypass, String keystore,
+			String storepass, String storetype, String cn, String ou, String o, String l,
+			String s, String c){
+		
+		String ss ="keytool -genkeypair -alias "+alias+" -keyalg "+keyalg+" -sigalg "+sigalg+
+			" -keypass "+keypass+" -storepass "+storepass+" -dname USERDATA";
+		if(keysize != null)
+			ss += " -keysize "+keysize;
+		if(keystore != null)
+			ss += " -keystore "+keystore;
+		else if(keyStorePath != null)
+			ss += " -keystore "+keyStorePath;
+		if(storetype != null)
+			ss += " -storetype "+storetype;
+		if(validity != null)
+			ss += " -validity "+validity;
+		String[] array = ss.split(" ");
+		// Sustituimos "USERDATA" por la informacion
+		array[13] = "CN="+cn+", OU="+ou+", O="+o+", L="+l+", S="+s+", C="+c;
+		
+		//for(int i = 0; i < array.length; i++)
+			//System.out.println(array[i]);
+		
+		try{
+			Runtime runtime = Runtime.getRuntime();
+			//runtime.exec(array).waitFor();
+			Process proc = runtime.exec(array);
+			InputStream is = proc.getInputStream();
+			proc.waitFor();
+			
+			BufferedReader br = new BufferedReader(new InputStreamReader(is));
+			String msg = br.readLine();
+			
+			//System.out.println(msg);
+			
+			return msg;
+		}catch(Exception e){
+			String error = "No se pudo ejecutar el comando: "+array+"\nMotivo: "+e.getMessage();
+			return error;
+		}
+	}
+	
+	public void importar(){
+		
+	}
+	
+	public String exportar(String alias, String fileout, String keypass,
+			String storepass, String ks){
+		String ss ="keytool -exportcert -alias "+alias+" -file "+fileout+
+			" -keypass "+keypass+" -storepass "+storepass;
+		if(ks != null)
+			ss += " -keystore "+ks;
+		else if(keyStorePath != null)
+			ss += " -keystore "+keyStorePath;
+		String[] array = ss.split(" ");
+		
+		try{
+			Runtime runtime = Runtime.getRuntime();
+			//runtime.exec(array).waitFor();
+			Process proc = runtime.exec(array);
+			InputStream is = proc.getInputStream();
+			proc.waitFor();
+			
+			BufferedReader br = new BufferedReader(new InputStreamReader(is));
+			String msg = br.readLine();
+			
+			//System.out.println(msg);
+			
+			return msg;
+		}catch(Exception e){
+			String error = "No se pudo ejecutar el comando: "+array+"\nMotivo: "+e.getMessage();
+			return error;
+		}
+	}
+
+	public String[] listaCertificados(){
+		ArrayList<String> lista = new ArrayList<String>();
+		
+		try{
+			KeyStore ks = KeyStore.getInstance("JCEKS");
+
+			char[] password = new char[] {'c','h','a','n','g','e','i','t'};
+
+			File keystoreFile = this.fileKeyStore;
+
+			FileInputStream fis = new java.io.FileInputStream(keystoreFile);
+
+			ks.load(fis, password);
+			
+			Enumeration<String> aliases = ks.aliases();
+			while(aliases.hasMoreElements()){
+			   String alias = aliases.nextElement();
+			   KeyStore.Entry entry = ks.getEntry(alias, null);
+			   System.out.println(entry);
+			}
+
+			fis.close();
+		}catch(Exception e){
+			System.out.println("Mal rollo: "+e.getMessage());
+		}
+	}
+	
+	public String rutaKeyStore(){
+		return null;
+	}
+	
+	public String firmar(){
+		return null;
+	}
+	
+	public boolean checkFirma(){
+		return true;
+	}
+	
+	public boolean checkMD(){
+		return true;
+	}
+	
+	public void cifrar(){
+		
+	}
+	
+	public void descifrar(){
+		
+	}
+	
+	public static void main(String[] args) {
+		Certificados cert = new Certificados();
+		
+		/*cert.crearAutofirmado("Luis", "RSA", "SHA1withRSA", null, null, "passwd", "luis.keystore", "passwd", null,
+				"Luis GP", "Nada", "Nada2", "Fuenla", "Madrid", "ES");*/
+		cert.exportar("Luis", "exp.cer", "passwd", "passwd", "luis.keystore");
+		// Añadir y exportar certificados
+		/*try
+		{
+			Runtime runtime = Runtime.getRuntime();
+			String ss ="keytool -genkeypair -alias LuisGP -keyalg RSA -sigalg SHA1withRSA -keysize 1024 -dname PLACEHOLDER -keypass passwd1 -storepass passwd2 -keystore prueba.keystore";
+			String[] array = ss.split(" ");
+			array[11] = "CN="+"Luis Gasco Poderoso"+", OU="+""+", O="+""+", L="+"Fuenlabrada"+", S="+"Madrid"+", C="+"ES";
+			runtime.exec(array).waitFor();
+			String ss1 ="keytool -exportcert -alias LuisGP -file luisgp.cer -keypass passwd1 -storepass passwd2 -keystore prueba.keystore";
+			String[] array1 = ss1.split(" ");
+			runtime.exec(array1).waitFor();			
+		}
+		catch (Exception ex)
+		{
+			System.out.println(ex.getMessage());
+		}
+		*/
+		// Listar y acceder a certificados
+		/*try{
+			KeyStore ks = KeyStore.getInstance("JCEKS");
+
+			char[] password = new char[] {'c','h','a','n','g','e','i','t'};
+
+//			File keystoreFile = new File(System.getProperty("user.home"),
+//			".keystore");
+
+			File keystoreFile = new File(System.getProperty("java.home")
+					+ "/lib/security", "cacerts");
+
+			FileInputStream fis = new java.io.FileInputStream(keystoreFile);
+
+			ks.load(fis, password);
+			
+			Enumeration<String> aliases = ks.aliases();
+			while(aliases.hasMoreElements()){
+			   String alias = aliases.nextElement();
+			   KeyStore.Entry entry = ks.getEntry(alias, null);
+			   //System.out.println(entry);
+			   TrustedCertificateEntry tce = (TrustedCertificateEntry) entry;
+			   Certificate cer = tce.getTrustedCertificate();
+			   System.out.println(cer);
+			}
+
+			fis.close();
+		}catch(Exception e){
+			System.out.println("Mal rollo: "+e.getMessage());
+		}
+	*/
+	}
+}
+
